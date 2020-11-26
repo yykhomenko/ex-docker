@@ -9,7 +9,7 @@ services:
       - REDIS_REPLICATION_MODE=master
       - REDIS_PASSWORD=my_master_password
     volumes:
-      - 'bitnami:/bitnami'
+      - '${PWD}/data:/bitnami'
 
   redis-replica:
     image: 'bitnami/redis:latest'
